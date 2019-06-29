@@ -2,3 +2,6 @@
 通过url手动下载数据集
 脚本重写为preproce.py
 运行sh脚本文件跑MRPC数据集
+
+
+将bert训练MRPC数据集的结果用于预测句子相似度，写入API用来调用
