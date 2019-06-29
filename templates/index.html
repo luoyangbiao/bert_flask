@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>similarity</title>
+    </head>
+    <body>
+        <div align="center" style="margin-top:80px">
+            <!-- <img src="./static/background.jpg" alt="yurisa" height = "400px" /> -->
+            <img src=" {{url_for('static', filename='background.jpg') }} " alt="similarity" height = "400px" />
+        </div>
+
+        <div align="center" style="margin-top:30px">
+            <form method="POST" name = "form1">
+                <input type="text" name = "sentence1" placeholder = "sentence1" maxlength = "62" value = "{{ SENTENCE1 }}"/>with
+                <input type="text" name = "sentence2" placeholder = "sentence2" maxlength = "62" value = "{{ SENTENCE2 }}"/>  similarity_score  
+                <input type="text" name = "result" placeholder = "_" readonly="readonly" value = "{{ RESULT }}"/>
+                <input type="submit" value = "计算"/>
+            </form>
+        </div>
+
+    </body>
+</html>
