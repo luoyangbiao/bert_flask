@@ -512,7 +512,7 @@ def convert_examples_to_features(examples, label_list, max_seq_length,
 
 
 def main(_):
-  app = Flask(__name__)
+
 
   tf.logging.set_verbosity(tf.logging.INFO)
   tokenization.validate_case_matches_checkpoint(FLAGS.do_lower_case,
@@ -568,7 +568,7 @@ def main(_):
       train_batch_size=FLAGS.train_batch_size,
       eval_batch_size=FLAGS.eval_batch_size,
       predict_batch_size=FLAGS.predict_batch_size)
-
+  app = Flask(__name__)
   if FLAGS.do_predict:
 
     predict_file = os.path.join(FLAGS.output_dir, "predict.tf_record")
