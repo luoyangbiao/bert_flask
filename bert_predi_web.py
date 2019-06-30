@@ -612,7 +612,7 @@ def main(_):
 
 
       except Exception as e:
-        response["error_message"] = "An error occur, please read the document or contact me by luoyangbiao@putao.com"
+        response["error_message"] = "An error occur, please read the document or contact me by luoyangbiao@bupt.edu.cn"
       return render_template('index.html', RESULT = response["prediction_1"], SENTENCE1 = sentence1, SENTENCE2 = sentence2)
 
     app.run("0.0.0.0", port=5005, threaded=True)
